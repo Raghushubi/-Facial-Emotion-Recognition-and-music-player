@@ -1,0 +1,6 @@
+# Facial-Emotion-Recognition-and-music-player
+## Project Description
+This project is a real-time emotion-based music player that uses a webcam to detect a user’s face, recognize their facial emotion, and play music that matches the detected mood. The system continuously observes facial expressions, identifies the dominant emotion over time, and selects appropriate music accordingly. To make the experience stable and realistic, the project focuses on consistent emotion detection rather than reacting to sudden or noisy changes in facial expressions. The goal is to create a smooth and natural interaction where music adapts to how the user feels in real time.
+
+### Comments:
+I started with basic face detection using the webcam and noticed that faces and emotions were changing randomly every frame. To fix this, I tracked faces across frames and used time windows so that a face or emotion is accepted only if it appears consistently for some time. I then added emotion detection using DeepFace and selected a final emotion only when it stays the same for long enough. To avoid music switching because of multiple people, I used only the biggest face in the frame and changed music only when the emotion actually changes. The main focus was making the system stable instead of reacting instantly.
